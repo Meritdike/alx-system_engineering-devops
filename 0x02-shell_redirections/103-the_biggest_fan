@@ -1,2 +1,3 @@
 #!/bin/bash
-LOG_FILE=$1
+tail -n +2 | sort | cut -f1 | uniq -c | sort -g -r | head -n11 | tr -s ' ' | cut
+ -d ' ' -f3  
